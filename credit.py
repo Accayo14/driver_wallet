@@ -38,7 +38,7 @@ def driver_exists(driver_id):
 def add_driver(driver_id, name, phone):
     drivers = _load_drivers()
     if driver_exists(driver_id):
-        print("⚠️ Driver already exists")
+        print("Driver already exists")
         return
 
     drivers = pd.concat([drivers, pd.DataFrame([{
@@ -48,7 +48,7 @@ def add_driver(driver_id, name, phone):
         "created_at": datetime.utcnow().isoformat()
     }])])
     _save_drivers(drivers)
-    print("✅ Driver added")
+    print("Driver added")
 
 
 def credit_driver(driver_id, amount, reason):
@@ -64,7 +64,7 @@ def credit_driver(driver_id, amount, reason):
         "timestamp": datetime.utcnow().isoformat()
     }])])
     _save_ledger(ledger)
-    print("✅ Wallet credited")
+    print("Wallet credited")
 
 
 def get_wallet_balance(driver_id):
