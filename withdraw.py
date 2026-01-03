@@ -71,5 +71,5 @@ def withdraw(driver_id, amount):
     }])])
     _save_withdrawals(withdrawals)
 
-    print("✅ Withdrawal completed")
+    print("Withdrawal completed")
     print("Razorpay Order ID:", order["id"])
